@@ -95,7 +95,7 @@ func SendEmailSES(mail *Mail) {
 	var bccRecipients []*string
 	if len(mail.BCC) > 0 {
 		for _, r := range mail.BCC {
-			recipients = append(recipients, &r)
+			bccRecipients = append(bccRecipients, &r)
 		}
 	}
 
